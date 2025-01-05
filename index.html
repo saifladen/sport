@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Exercise Videos</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;  /* Safari */
+            -moz-user-select: none;     /* Firefox */
+            -ms-user-select: none;      /* Internet Explorer/Edge */
+            user-select: none;          /* Non-prefixed version, for modern browsers */
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7; /* Improved line-height for readability */
+            text-align: left; /* Align all text to the left */
+        }
+
+        /* Header */
+        h1 {
+            font-size: 2.5rem;
+            color: #00b4d8;
+            margin-top: 20px;
+            text-align: center; /* Align header text to the left */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #aaaaaa;
+            text-align: center; /* Align paragraph text to the left */
+            margin-bottom: 20px;
+            line-height: 1.8; /* Adjusted line height for better readability */
+            font-weight: 300; /* Lighter font weight for better visual contrast */
+        }
+
+        /* Flex container for Day 1, Day 2, Day 3 */
+        .days-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap; /* Allow wrapping for responsiveness */
+        }
+
+        .section {
+            margin: 20px;
+            padding: 20px;
+            background: #1e1e1e;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            width: 30%;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-align: left; /* Align section titles to the left */
+        }
+
+        /* Video Container */
+        .video-container {
+            margin-bottom: 20px;
+            text-align: left; /* Align video container text to the left */
+            border-bottom: 1px solid #ffffff; /* Thin line separator */
+            padding-bottom: 20px; /* Space below the line */
+        }
+
+        .video-container h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-align: left; /* Align video container titles to the left */
+        }
+
+        /* Exercise Item */
+        .exercise-item {
+            margin-bottom: 20px;
+        }
+
+        .exercise-item video {
+            width: 100%; /* Adjust the video width */
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover Effect on Exercise Names */
+        .exercise-name {
+            font-size: 1.2rem;
+            color: #00b4d8;
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: left; /* Align exercise names to the left */
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .exercise-name:hover {
+            color: #00768d; /* Change color on hover */
+        }
+
+        /* Custom Video Controls */
+        video::-webkit-media-controls {
+            display: none; /* Hide default controls */
+        }
+
+        /* Custom control styling */
+        .exercise-item video {
+            position: relative;
+        }
+
+        .exercise-item video:before {
+            content: 'Controls';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1rem;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .exercise-item video:hover:before {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            text-align: left; /* Align footer text to the left */
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .days-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .section {
+                width: 80%; /* Adjust section width for smaller screens */
+            }
+            h1 {
+                font-size: 2rem; /* Adjust header size for small screens */
+            }
+            p {
+                font-size: 1rem; /* Adjust paragraph size for small screens */
+            }
+            .exercise-name {
+                font-size: 1.1rem; /* Adjust exercise name font size */
+            }
+            .video-container h3 {
+                font-size: 1.3rem; /* Adjust video container title font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Gym Exercise Videos</h1>
+    <p>Explore your daily workout videos to stay fit and healthy.</p>
+
+    <!-- Days Container -->
+    <div class="days-container">
+
+        <!-- Day 1 Section -->
+        <div class="section">
+            <h2>Day 1</h2>
+
+            <!-- Chest Section -->
+            <div class="video-container">
+                <h3>CHEST EXERCISES</h3>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/00251201-Barbell-Bench-Press-Chest.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Bench Press(12-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/03081201-Dumbbell-Fly-Chest.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Dumbbell Fly(12-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/04331201-Dumbbell-Straight-Arm-Pullover-Chest.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Dumbbell Pullover(10-10-10)</div>
+                </div>
+            </div>
+
+            <!-- Triceps Section -->
+            <div class="video-container">
+                <h3>TRICEPS EXERCISES</h3>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/EZ-Barbell-Lying-Triceps-Extension-Upper-Arms.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">LYING TRICEP EXTENSION(12-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/04301201-Dumbbell-Standing-Triceps-Extension-Upper-Arms.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Dumbbell Triceps Extension(12-10-8-8)</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Day 2 Section -->
+        <div class="section">
+            <h2>Day 2</h2>
+
+            <!-- Bicep Section -->
+            <div class="video-container">
+                <h3>BICEP EXERCISES</h3>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/00311201-Barbell-Curl-Upper-Arms.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Barbell Curl(12-10-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/03121201-Dumbbell-Hammer-Curl-version-2-Upper-Arms.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Hammer Curl(12-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/04511201-EZ-Barbell-Reverse-Grip-Curl-Forearms.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">EZ Bar Reverse Curl(12-10-8)</div>
+                </div>
+            </div>
+
+            <!-- Back Section -->
+            <div class="video-container">
+                <h3>BACK EXERCISES</h3>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/02921201-Dumbbell-Bent-over-Row-Back.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Dumbbell Row(12-10-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/00271201-Barbell-Bent-Over-Row-Back.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Bent Over Row(12-10-10-8)</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Day 3 Section -->
+        <div class="section">
+            <h2>Day 3</h2>
+
+            <!-- Shoulders Section -->
+            <div class="video-container">
+                <h3>SHOULDERS EXERCISES</h3>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/03341201-Dumbbell-Lateral-Raise-shoulder.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Lateral Raise(12-10-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/04051201-Dumbbell-Seated-Shoulder-Press-Shoulders.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Dumbbell Shoulder Press(12-10-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/11651201-Barbell-Standing-Military-Press-without-rack-Shoulders.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Barbell Shoulder Press(10-10-10)</div>
+                </div>
+            </div>
+
+            <!-- Triceps Section -->
+            <div class="video-container">
+                <h3>TRICEPS EXERCISES</h3>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/EZ-Barbell-Lying-Triceps-Extension-Upper-Arms.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">LYING TRICEP EXTENSION(12-10-8)</div>
+                </div>
+                <div class="exercise-item">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="https://app.fitnessai.com/exercises/04301201-Dumbbell-Standing-Triceps-Extension-Upper-Arms.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="exercise-name">Dumbbell Triceps Extension(12-10-8-8)</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Gym Exercise Videos. All rights reserved.</p>
+    </footer>
+</body>
+</html>
